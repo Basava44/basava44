@@ -59,6 +59,7 @@ function renderPortfolio() {
   document.getElementById("heroName").textContent = portfolioData.name;
   document.getElementById("heroRole").textContent = portfolioData.role;
   document.getElementById("heroSummary").textContent = portfolioData.summary;
+  document.getElementById("heroSummaryMobile").textContent = portfolioData.summary_mobile;
 
   // About Section
   document.getElementById("shortIntro").textContent =

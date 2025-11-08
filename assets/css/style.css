@@ -429,7 +429,7 @@ nav .container {
   animation: fadeInUp 0.8s ease 0.2s both;
 }
 
-.hero .summary {
+.hero .summary, .hero .summary_mobile {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: var(--text-tertiary);
   max-width: 800px;
@@ -1160,7 +1160,7 @@ footer {
     font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   }
 
-  .hero .summary {
+  .hero .summary, .hero .summary_mobile {
     font-size: clamp(0.9rem, 2.5vw, 1rem);
     margin-bottom: 2rem;
   }
@@ -1298,11 +1298,15 @@ footer {
     color: var(--accent);
   }
 
-  .hero .summary {
+  .hero .summary, .hero .summary_mobile {
     margin-bottom: 1.5rem;
     line-height: 1.6;
     font-size: clamp(0.9rem, 2.8vw, 1rem);
     padding: 0 0.5rem;
+  }
+
+  .hero .summary {
+    display: none;
   }
 
   .hero-buttons {
