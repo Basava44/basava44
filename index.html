@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karibasaveshwara TG - Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body data-theme="dark">
+    <!-- Abstract Background -->
+    <div class="abstract-background">
+        <div class="abstract-shape shape-1"></div>
+        <div class="abstract-shape shape-2"></div>
+        <div class="abstract-shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">KTG</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background" id="codeBackground"></div>
+        <div class="hero-content">
+            <h1 id="heroName">Loading...</h1>
+            <p class="role" id="heroRole">Loading...</p>
+            <p class="summary" id="heroSummary">Loading...</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="Karibasaveshwara TG.pdf" class="btn btn-secondary" download>
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images/profile.png" alt="Profile" class="profile-img" id="profileImg">
+                <div class="social-icons" id="socialIcons"></div>
+            </div>
+            <div class="about-text">
+                <p id="shortIntro"></p>
+                <p id="detailedAbout"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container" id="skillsContainer"></div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline" id="experienceTimeline"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+        <h2 class="section-title">Education</h2>
+        <div class="info-cards" id="educationCards"></div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="fade-in">
+        <h2 class="section-title">Awards</h2>
+        <div class="info-cards" id="awardsCards"></div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="fade-in">
+        <h2 class="section-title">Publications</h2>
+        <div class="info-cards" id="publicationsCards"></div>
+        </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="fade-in">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-card">
+            <i class="fab fa-medium blog-icon"></i>
+            <h3 id="blogTitle">Medium Blog</h3>
+            <p id="blogDescription" class="info-card-text"></p>
+            <a href="#" id="blogLink" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Visit Blog
+            </a>
+                </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-items-row">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span id="contactEmail"></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span id="contactPhone"></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="contactLocation"></span>
+                    </div>
+                </div>
+                <div class="social-icons" id="contactSocialIcons"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-tagline" id="footerTagline"></p>
+            <p class="footer-copyright" id="footerCopyright"></p>
+                        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

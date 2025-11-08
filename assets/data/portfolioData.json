@@ -1,0 +1,125 @@
+{
+    "name": "Karibasaveshwara TG",
+    "role": "Full Stack Developer (Frontend-Focused)",
+    "location": "Bengaluru, India",
+    "email": "karibasava.t.g@gmail.com",
+    "phone": "+91 8073967470",
+    "linkedin": "https://www.linkedin.com/in/karibasaveshwara-t-g-36ba661b9/",
+    "github": "https://github.com/Basava44",
+    "medium": "https://medium.com/@karibasava.tg",
+    "instagram": "https://www.instagram.com/basava44/",
+    "portfolio": "https://basava44.github.io/TshirtBazar",
+    "summary": "Full Stack Developer (Frontend-Focused) with 4+ years of experience building scalable, high-performing web applications. Specializes in Angular, Ember.js, Vue.js, and React, with solid backend experience in Golang and Node.js. Passionate about writing clean code, intuitive design, and building products that make an impact. Outside of work, loves exploring new ideas like Flink (WIP), capturing and enjoying every little moment of life, and riding his yellow Yezdi Scrambler.",
+    "about": {
+      "short_intro": "I’m a frontend-focused full stack developer who thrives on bringing ideas to life with clean architecture and elegant UI. I enjoy designing user-first interfaces that feel seamless and perform flawlessly across devices.",
+      "detailed": "With a strong foundation in Angular, Ember.js, Vue.js, and React, I’ve spent over 4 years building robust and maintainable applications for enterprises and startups alike. I take pride in creating modular, reusable code and translating design concepts into efficient, scalable frontends. My experience extends to backend development using Golang and Node.js, giving me an end-to-end perspective on web application architecture. Beyond code, I’m working on a side project called 'Flink' (WIP) — a social link-sharing app that connects people more meaningfully. Outside tech, I find balance in photography, journaling, and riding my Yezdi Scrambler."
+    },
+    "skills": [
+      "Angular", "Ember.js", "Vue.js", "React", 
+      "JavaScript", "TypeScript", "HTML5", "CSS3", "SCSS", "Tailwind CSS", 
+      "Golang", "Node.js", "Express.js", "MongoDB", 
+      "NgRx", "Redux", "RxJS", "RESTful APIs", 
+      "Bootstrap", "Angular Material", "Jasmine", "Jest",
+      "Docker", "Observability", "Accessibility", "Nomad"
+    ],
+    "experience": [
+      {
+        "company": "Moonraft (UST)",
+        "location": "Bengaluru, India",
+        "position": "Angular Developer",
+        "duration": "July 2021 – Present",
+        "projects": [
+          {
+            "title": "Standard Bank Internet Banking Application",
+            "description": "Developed a hybrid internet banking application for small-screen devices, enhancing UI responsiveness and design. Collaborated with the design team for iterative reviews, created dynamic reusable components, and optimized load performance.",
+            "achievements": [
+              "Built dynamic Angular UI components from scratch for reusability and scalability.",
+              "Led the UI redesign for mobile experiences, improving usability and engagement.",
+              "Migrated the entire application from Angular 7 to Angular 12, enhancing maintainability and performance.",
+              "Managed a 5-member development team, successfully remapping 300+ APIs into the system with zero UI regressions.",
+              "Oversaw sprint planning, code quality, and timely feature delivery."
+            ]
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "TShirt Bazar - E-Commerce Application",
+        "techStack": ["Angular 12", "Angular Material", "SCSS"],
+        "description": "An e-commerce platform designed and developed using Angular and Angular Material. Implemented lazy loading for performance optimization and NgRx for state management.",
+        "url": "https://basava44.github.io/TshirtBazar"
+      },
+      {
+        "title": "Contacts Manager App",
+        "techStack": ["Angular 12", "TailwindCSS", "NgXs", "Node.js", "Express", "MongoDB"],
+        "description": "A responsive contacts manager with a secure Node.js + MongoDB backend. Designed for efficiency and clean UI using TailwindCSS and Angular.",
+        "frontendRepo": "https://github.com/Basava44/contacts-frontend",
+        "backendRepo": "https://github.com/Basava44/contacts-backend"
+      },
+      {
+        "title": "Flink (WIP) - Social Links App",
+        "techStack": ["React", "Supabase"],
+        "description": "A modern social app allowing users to share and manage their social links, connect with friends, and customize visibility. Features request-based connections and privacy controls.",
+        "status": "WIP"
+      },
+      {
+        "title": "Autonomous Vehicle Simulation",
+        "techStack": ["Webots", "Python", "Computer Vision","Sensor Simulation"],
+        "description": "A Webots-based autonomous vehicle that performs traffic signal detection, collision avoidance, and lane detection for intelligent navigation.",
+        "demoVideo": "https://www.youtube.com/watch?v=dqveQ-fo1fg",
+        "toolLink": "https://cyberbotics.com",
+        "githubRepo": "https://github.com/Basava44/Autonomous-Vehicle"
+      }
+    ],
+    "education": [
+      {
+        "institution": "R V College of Engineering, Bangalore",
+        "degree": "Bachelor of Engineering in Electronics and Communication",
+        "year": "2021",
+        "cgpa": "7.4 / 10"
+      },
+      {
+        "institution": "T.M.A.E's Polytechnic, Hospet",
+        "degree": "Diploma in Electronics and Communication Engineering",
+        "year": "2018",
+        "percentage": "86 / 100"
+      }
+    ],
+    "publications": [
+      {
+        "title": "Detection of Diseases in Arecanut Using Conventional Neural Networks",
+        "publisher": "IRJET - Volume 08, Issue 04, April 2021",
+        "link": "https://www.irjet.net/archives/V8/i5/IRJET-V8I5781.pdf"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Rafter of the Year - 2023",
+        "organization": "Moonraft (UST)",
+        "description": "Awarded for exceptional contribution, leadership, and technical excellence in the Standard Bank project."
+      }
+    ],
+    "blogs": [
+      {
+        "platform": "Medium",
+        "url": "https://medium.com/@karibasava.tg",
+        "description": "I write about frontend development, performance optimization, and lessons learned from real-world projects."
+      }
+    ],
+    "contact": {
+      "email": "karibasava.t.g@gmail.com",
+      "phone": "+91 8073967470",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/karibasaveshwara-t-g-36ba661b9/",
+        "github": "https://github.com/Basava44",
+        "medium": "https://medium.com/@karibasava.tg",
+        "instagram": "https://www.instagram.com/basava44/"
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 Karibasaveshwara TG. All rights reserved.",
+      "tagline": "Building modern, scalable, and elegant web experiences."
+    }
+  }
+  
