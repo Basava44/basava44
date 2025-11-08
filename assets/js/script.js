@@ -279,10 +279,29 @@ function renderPortfolio() {
   });
 
   // Blog Section
-  const blog = portfolioData.blogs[0];
-  document.getElementById("blogTitle").textContent = blog.platform;
-  document.getElementById("blogDescription").textContent = blog.description;
-  document.getElementById("blogLink").href = blog.url;
+  if (portfolioData.blogs && portfolioData.blogs.length > 0) {
+    const blog = portfolioData.blogs[0];
+    const blogTitle = document.getElementById("blogTitle");
+    const blogDescription = document.getElementById("blogDescription");
+    const blogLink = document.getElementById("blogLink");
+    
+    if (blogTitle) blogTitle.textContent = blog.platform;
+    if (blogDescription) blogDescription.textContent = blog.description;
+    if (blogLink && blog.url) {
+      blogLink.href = blog.url;
+      blogLink.setAttribute("href", blog.url);
+      // Ensure the link opens correctly
+      blogLink.addEventListener("click", function(e) {
+        // The href should handle it, but this ensures it works
+        if (!blogLink.href || blogLink.href === "#" || blogLink.href === window.location.href) {
+          e.preventDefault();
+          if (blog.url) {
+            window.open(blog.url, "_blank", "noopener,noreferrer");
+          }
+        }
+      });
+    }
+  }
 
   // Contact Section
   document.getElementById("contactEmail").textContent =

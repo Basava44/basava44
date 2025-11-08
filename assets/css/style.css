@@ -463,6 +463,9 @@ nav .container {
   align-items: center;
   gap: 0.5rem;
   border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary {
