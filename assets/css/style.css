@@ -438,6 +438,10 @@ nav .container {
   animation: fadeInUp 0.8s ease 0.4s both;
 }
 
+.hero .summary_mobile {
+  display: none;
+}
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -1307,6 +1311,10 @@ footer {
 
   .hero .summary {
     display: none;
+  }
+
+  .hero .summary_mobile {
+    display: block;
   }
 
   .hero-buttons {
