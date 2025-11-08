@@ -400,6 +400,45 @@ scrollToTopBtn.addEventListener("click", () => {
 window.addEventListener("scroll", toggleScrollToTop);
 window.addEventListener("resize", toggleScrollToTop);
 
+// Custom Cursor
+const customCursor = document.getElementById("customCursor");
+let cursorX = 0;
+let cursorY = 0;
+let currentX = 0;
+let currentY = 0;
+
+if (customCursor) {
+  document.addEventListener("mousemove", (e) => {
+    cursorX = e.clientX;
+    cursorY = e.clientY;
+  });
+
+  // Smooth cursor animation
+  function animateCursor() {
+    currentX += (cursorX - currentX) * 0.1;
+    currentY += (cursorY - currentY) * 0.1;
+    customCursor.style.left = currentX + "px";
+    customCursor.style.top = currentY + "px";
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Cursor hover effects - use event delegation for dynamically loaded content
+  document.addEventListener("mouseover", (e) => {
+    const target = e.target;
+    if (target.matches("a, button, .btn, .social-icon, .project-link, .info-card-link, .theme-toggle")) {
+      customCursor.classList.add("hover");
+    }
+  });
+
+  document.addEventListener("mouseout", (e) => {
+    const target = e.target;
+    if (target.matches("a, button, .btn, .social-icon, .project-link, .info-card-link, .theme-toggle")) {
+      customCursor.classList.remove("hover");
+    }
+  });
+}
+
 // Initialize
 createCodeBackground();
 loadPortfolioData();
