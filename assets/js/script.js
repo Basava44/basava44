@@ -56,10 +56,38 @@ function createCodeBackground() {
 // Render portfolio
 function renderPortfolio() {
   // Hero Section
-  document.getElementById("heroName").textContent = portfolioData.name;
-  document.getElementById("heroRole").textContent = portfolioData.role;
-  document.getElementById("heroSummary").textContent = portfolioData.summary;
-  document.getElementById("heroSummaryMobile").textContent = portfolioData.summary_mobile;
+  const nameParts = portfolioData.name.split(" ");
+  const firstName = nameParts[0] || portfolioData.name;
+  document.getElementById("heroName").textContent = firstName;
+  
+  // Split role: "Full Stack Developer (Frontend-Focused)"
+  // First line: "Full Stack Developer", Second line: "(Frontend-Focused)"
+  const role = portfolioData.role || "Full Stack Developer (Frontend-Focused)";
+  const parenIndex = role.indexOf("(");
+  
+  if (parenIndex !== -1) {
+    // Split at the opening parenthesis
+    const firstPart = role.substring(0, parenIndex).trim();
+    const secondPart = role.substring(parenIndex).trim();
+    document.getElementById("heroTitlePart1").textContent = firstPart || "Full Stack Developer";
+    document.getElementById("heroTitlePart2").textContent = secondPart || "(Frontend-Focused)";
+  } else {
+    // Fallback if no parentheses found
+    document.getElementById("heroTitlePart1").textContent = role;
+    document.getElementById("heroTitlePart2").textContent = "";
+  }
+  
+  // Use a shorter description for hero
+  const shortDescription = portfolioData.about?.short_intro || portfolioData.summary || "I'm a developer passionate about building beautiful and functional web experiences.";
+  document.getElementById("heroDescription").textContent = shortDescription;
+  
+  // Set resume link
+  if (portfolioData.resume) {
+    const resumeLink = document.getElementById("resumeLink");
+    if (resumeLink) {
+      resumeLink.href = portfolioData.resume;
+    }
+  }
 
   // About Section
   document.getElementById("shortIntro").textContent =
@@ -93,6 +121,13 @@ function renderPortfolio() {
   // Experience Section
   const experienceTimeline = document.getElementById("experienceTimeline");
   portfolioData.experience.forEach((exp) => {
+    // Find awards related to this company
+    const relatedAwards = portfolioData.awards?.filter(
+      (award) => award.organization && exp.company && 
+      (award.organization.toLowerCase().includes(exp.company.toLowerCase()) || 
+       exp.company.toLowerCase().includes(award.organization.toLowerCase()))
+    ) || [];
+    
     const item = document.createElement("div");
     item.className = "experience-item";
     item.innerHTML = `
@@ -127,6 +162,19 @@ function renderPortfolio() {
                     }
                   )
                   .join("")}
+                ${relatedAwards.length > 0 ? `
+                <div class="awards-section">
+                    <div class="awards-title">
+                        <i class="fas fa-trophy"></i> Awards & Recognition
+                    </div>
+                    ${relatedAwards.map(award => `
+                        <div class="award-item">
+                            <div class="award-name">${award.title}</div>
+                            ${award.description ? `<div class="award-description">${award.description}</div>` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
             </div>
         `;
     experienceTimeline.appendChild(item);
@@ -249,19 +297,6 @@ function renderPortfolio() {
     educationCards.appendChild(card);
   });
 
-  // Awards Section
-  const awardsCards = document.getElementById("awardsCards");
-  portfolioData.awards.forEach((award) => {
-    const card = document.createElement("div");
-    card.className = "info-card";
-    card.innerHTML = `
-            <div class="info-card-icon"><i class="fas fa-trophy"></i></div>
-            <div class="info-card-title">${award.title}</div>
-            <div class="info-card-subtitle">${award.organization}</div>
-            <div class="info-card-text">${award.description}</div>
-        `;
-    awardsCards.appendChild(card);
-  });
 
   // Publications Section
   const publicationsCards = document.getElementById("publicationsCards");

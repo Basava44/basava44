@@ -438,35 +438,55 @@ nav .container {
 .hero-content {
   max-width: 1200px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 1;
+  padding-left: 2rem;
 }
 
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
+.hero-greeting {
+  font-size: clamp(1.5rem, 1.3vw, 1.1rem);
+  color: var(--text-primary);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text-primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 400;
   animation: fadeInUp 0.8s ease;
 }
 
-.hero .role {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: var(--text-secondary);
+.hero-greeting span {
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 6.5vw, 4.5rem);
+  font-weight: 800;
   margin-bottom: 1.5rem;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
   animation: fadeInUp 0.8s ease 0.2s both;
 }
 
-.hero .summary, .hero .summary_mobile {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--text-tertiary);
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  line-height: 1.8;
+.hero-title .title-part-1 {
+  color: var(--accent);
+  font-size: 1em;
+  display: block;
+  font-weight: 800;
+}
+
+.hero-title .title-part-2 {
+  font-size: 0.45em;
+  color: var(--text-secondary);
+  display: block;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.hero-description {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
   animation: fadeInUp 0.8s ease 0.4s both;
 }
 
@@ -477,7 +497,7 @@ nav .container {
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   animation: fadeInUp 0.8s ease 0.6s both;
 }
@@ -506,6 +526,32 @@ nav .container {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary-dark {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: 2px solid var(--text-primary);
+}
+
+.btn-primary-dark:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn-secondary-light {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+}
+
+.btn-secondary-light:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -557,7 +603,6 @@ section:not(.hero) {
 
 /* Reduce spacing for specific sections */
 #projects,
-#awards,
 #publications,
 #blog {
   padding-bottom: 3rem;
@@ -772,6 +817,45 @@ section:not(.hero) {
   left: 0;
   color: var(--accent);
   font-weight: bold;
+}
+
+/* Awards Section in Experience */
+.awards-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border);
+}
+
+.awards-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.awards-title i {
+  color: var(--accent);
+}
+
+.award-item {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.award-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.award-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Projects Section */
@@ -1294,7 +1378,6 @@ footer {
 
   /* Reduce spacing for specific sections on mobile */
   #projects,
-  #awards,
   #publications,
   #blog {
     padding-bottom: 2rem;
@@ -1318,48 +1401,37 @@ footer {
   }
 
   .hero-content {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    padding-left: 1.5rem;
   }
 
-  .hero h1 {
+  .hero-greeting {
+    font-size: clamp(0.85rem, 2.2vw, 1rem);
     margin-bottom: 0.75rem;
-    line-height: 1.3;
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-    letter-spacing: -0.02em;
   }
 
-  .hero .role {
+  .hero-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.8rem);
     margin-bottom: 1rem;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    font-weight: 500;
-    color: var(--accent);
+    line-height: 1.2;
   }
 
-  .hero .summary, .hero .summary_mobile {
+  .hero-description {
+    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
     margin-bottom: 1.5rem;
-    line-height: 1.6;
-    font-size: clamp(0.9rem, 2.8vw, 1rem);
-    padding: 0 0.5rem;
-  }
-
-  .hero .summary {
-    display: none;
-  }
-
-  .hero .summary_mobile {
-    display: block;
+    max-width: 100%;
   }
 
   .hero-buttons {
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin-top: 1rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-buttons .btn {
-    padding: 0.7rem 1rem;
-    font-size: 0.65rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .section-title {
@@ -1435,6 +1507,29 @@ footer {
 
   .achievements-list li::before {
     left: 0.25rem;
+  }
+
+  .awards-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .awards-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .award-item {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+  }
+
+  .award-name {
+    font-size: 0.95rem;
+  }
+
+  .award-description {
+    font-size: 0.85rem;
   }
 
   .projects-grid {
