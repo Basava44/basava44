@@ -503,7 +503,7 @@ nav .container {
 }
 
 .btn {
-  padding: 0.875rem 2rem;
+  padding: 0.65rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
   text-decoration: none;
@@ -1423,15 +1423,15 @@ footer {
   }
 
   .hero-buttons {
-    gap: 0.75rem;
+    gap: 0.5rem;
     margin-top: 1rem;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 
   .hero-buttons .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
   .section-title {
