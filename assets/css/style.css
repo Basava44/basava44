@@ -40,38 +40,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
   position: relative;
-  cursor: none;
-}
-
-/* Custom Cursor */
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
-  mix-blend-mode: difference;
-}
-
-.custom-cursor.hover {
-  width: 40px;
-  height: 40px;
-  background: rgba(59, 130, 246, 0.1);
-  border-color: var(--accent);
-}
-
-@media (max-width: 768px) {
-  body {
-    cursor: auto;
-  }
-  
-  .custom-cursor {
-    display: none;
-  }
 }
 
 /* Abstract Background */
@@ -977,7 +945,6 @@ section:not(.hero) {
   align-items: center;
   gap: 0.5rem;
   box-shadow: 0 2px 4px var(--shadow);
-  cursor: pointer;
 }
 
 .skill-item:hover {
